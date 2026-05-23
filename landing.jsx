@@ -19,7 +19,7 @@ function Nav() {
           <a href="#region">Pour le franc CFA</a>
           <a href="#faq">FAQ</a>
         </div>
-        <a href="#installer" className="lp-btn">
+        <a href="https://my-wallet-nine-ecru.vercel.app/" className="lp-btn" target="_blank" rel="noopener noreferrer">
           <Icon name="plus" size={16} stroke={2.2} />
           Installer
         </a>
@@ -56,11 +56,11 @@ function Hero() {
             Xaalis est une application web d'épargne et de dépense personnelle, conçue pour le franc CFA — et pour le pouce. Trois secondes d'attention au marché suffisent.
           </p>
           <div className="lp-hero-cta">
-            <a href="#installer" className="lp-btn lp-btn-lg">
+            <a href="https://my-wallet-nine-ecru.vercel.app/" className="lp-btn lp-btn-lg" target="_blank" rel="noopener noreferrer">
               <Icon name="plus" size={18} stroke={2.2} />
               Installer Xaalis
             </a>
-            <a href="#demo" className="lp-btn lp-btn-ghost lp-btn-lg">
+            <a href="https://my-wallet-nine-ecru.vercel.app/" className="lp-btn lp-btn-ghost lp-btn-lg" target="_blank" rel="noopener noreferrer">
               Essayer en direct
               <Icon name="arrow-right" size={16} stroke={2} />
             </a>
@@ -691,7 +691,7 @@ function Footer() {
         <div className="lp-footer-hero">
           <h2><span className="alt">Argent.</span><br /><em>Sans bruit.</em></h2>
           <p>Installez Xaalis sur votre écran d'accueil. Moins d'une minute, aucune carte bancaire, en français.</p>
-          <a href="#" className="lp-btn lp-btn-saffron lp-btn-lg">
+          <a href="https://my-wallet-nine-ecru.vercel.app/" className="lp-btn lp-btn-saffron lp-btn-lg" target="_blank" rel="noopener noreferrer">
             <Icon name="plus" size={18} stroke={2.4} />
             Installer Xaalis
           </a>
