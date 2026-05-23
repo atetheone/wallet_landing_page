@@ -6,10 +6,13 @@ const { useState: _ls, useEffect: _le, useRef: _lr } = React;
 // NAV
 // ────────────────────────────────────────────────────────────
 function Nav() {
+  const [menuOpen, setMenuOpen] = _ls(false);
+  const close = () => setMenuOpen(false);
+
   return (
     <nav className="lp-nav">
       <div className="lp-wrap lp-nav-inner">
-        <a href="#top" className="lp-logo">
+        <a href="#top" className="lp-logo" onClick={close}>
           <span className="lp-logo-mark">X</span>
           <span>Xaalis</span>
         </a>
@@ -19,11 +22,34 @@ function Nav() {
           <a href="#region">Pour le franc CFA</a>
           <a href="#faq">FAQ</a>
         </div>
-        <a href="https://my-wallet-nine-ecru.vercel.app/" className="lp-btn" target="_blank" rel="noopener noreferrer">
-          <Icon name="plus" size={16} stroke={2.2} />
-          Installer
-        </a>
+        <div className="lp-nav-actions">
+          <a href="https://my-wallet-nine-ecru.vercel.app/" className="lp-btn lp-nav-cta" target="_blank" rel="noopener noreferrer">
+            <Icon name="plus" size={16} stroke={2.2} />
+            Installer
+          </a>
+          <button
+            className={'lp-hamburger' + (menuOpen ? ' open' : '')}
+            onClick={() => setMenuOpen(o => !o)}
+            aria-label="Menu"
+            aria-expanded={menuOpen}
+          >
+            <span /><span /><span />
+          </button>
+        </div>
       </div>
+
+      {menuOpen && (
+        <div className="lp-mobile-drawer">
+          <a href="#fonctionnalites" onClick={close}>Fonctionnalités</a>
+          <a href="#comment-ca-marche" onClick={close}>Comment ça marche</a>
+          <a href="#region" onClick={close}>Pour le franc CFA</a>
+          <a href="#faq" onClick={close}>FAQ</a>
+          <a href="https://my-wallet-nine-ecru.vercel.app/" className="lp-btn lp-btn-lg lp-mobile-install" target="_blank" rel="noopener noreferrer" onClick={close}>
+            <Icon name="plus" size={18} stroke={2.2} />
+            Installer Xaalis
+          </a>
+        </div>
+      )}
     </nav>
   );
 }
