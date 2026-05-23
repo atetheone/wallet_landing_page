@@ -133,7 +133,9 @@ function Hero() {
 
           <div className="lp-phone">
             <div className="lp-phone-frame">
-              <ScreenAccueil />
+              <div className="lp-phone-scaler">
+                <ScreenAccueil />
+              </div>
             </div>
           </div>
         </div>
@@ -340,18 +342,20 @@ function InteractiveDemo() {
         <div className="lp-demo-phone-wrap">
           <div className="lp-phone">
             <div className="lp-phone-frame">
-              <MiniAjouter
-                amount={amount}
-                cat={cat}
-                method={method}
-                onCat={setCat}
-                onMethod={setMethod}
-                onPush={push}
-                onDel={del}
-                onValide={valide}
-                restant={restant}
-                willRest={willRest}
-              />
+              <div className="lp-phone-scaler">
+                <MiniAjouter
+                  amount={amount}
+                  cat={cat}
+                  method={method}
+                  onCat={setCat}
+                  onMethod={setMethod}
+                  onPush={push}
+                  onDel={del}
+                  onValide={valide}
+                  restant={restant}
+                  willRest={willRest}
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -292,8 +292,8 @@ a { color: inherit; }
 @media (max-width: 960px) {
   .lp-hero-phone { min-height: 560px; }
 }
-@media (max-width: 480px) {
-  .lp-hero-phone { min-height: auto; padding-bottom: 32px; }
+@media (max-width: 600px) {
+  .lp-hero-phone { min-height: auto; padding-bottom: 24px; }
 }
 
 /* decorative concentric arcs behind phone */
@@ -382,31 +382,56 @@ a { color: inherit; }
   0%, 100% { transform: translateY(0) rotate(-1deg); }
   50% { transform: translateY(-14px) rotate(-1.2deg); }
 }
-/* scale phone down on small viewports so it never overflows */
+/* phone scaler: always keep the inner design at 360×740 */
+.lp-hero-phone .lp-phone .lp-phone-scaler,
+.lp-demo-phone-wrap .lp-phone .lp-phone-scaler {
+  width: 360px;
+  height: 740px;
+}
+
+/*
+ * On small screens shrink the phone WRAPPER (layout box changes → no clipping issues)
+ * and scale the inner scaler to fill it.
+ * Scale factor = target_width / 360. Height = target_width * 740/360.
+ */
 @media (max-width: 480px) {
-  .lp-hero-phone .lp-phone {
-    animation: none;
-    transform: scale(0.88);
-    transform-origin: top center;
-    margin-bottom: -89px; /* 740 * (0.88-1) ≈ -89px to reclaim layout space */
-  }
+  /* target width: 288px (scale 0.8) */
+  .lp-hero-phone .lp-phone,
   .lp-demo-phone-wrap .lp-phone {
-    transform: scale(0.82);
-    transform-origin: top center;
-    margin-bottom: -133px; /* 740 * (0.82-1) ≈ -133px */
+    width: 288px;
+    height: 592px;
+    border-radius: 36px;
+    box-shadow:
+      0 0 0 8px #1a1611,
+      0 0 0 9px rgba(255,255,255,0.04),
+      0 32px 64px -16px rgba(26,22,17,0.30),
+      0 14px 32px rgba(26,22,17,0.12);
+    animation: none;
+  }
+  .lp-hero-phone .lp-phone .lp-phone-scaler,
+  .lp-demo-phone-wrap .lp-phone .lp-phone-scaler {
+    transform: scale(0.8);
+    transform-origin: top left;
   }
 }
 @media (min-width: 481px) and (max-width: 600px) {
-  .lp-hero-phone .lp-phone {
-    animation: none;
-    transform: scale(0.93);
-    transform-origin: top center;
-    margin-bottom: -52px;
-  }
+  /* target width: 324px (scale 0.9) */
+  .lp-hero-phone .lp-phone,
   .lp-demo-phone-wrap .lp-phone {
+    width: 324px;
+    height: 666px;
+    border-radius: 40px;
+    box-shadow:
+      0 0 0 9px #1a1611,
+      0 0 0 10px rgba(255,255,255,0.04),
+      0 36px 72px -18px rgba(26,22,17,0.30),
+      0 16px 36px rgba(26,22,17,0.12);
+    animation: none;
+  }
+  .lp-hero-phone .lp-phone .lp-phone-scaler,
+  .lp-demo-phone-wrap .lp-phone .lp-phone-scaler {
     transform: scale(0.9);
-    transform-origin: top center;
-    margin-bottom: -74px;
+    transform-origin: top left;
   }
 }
 
