@@ -1,13 +1,15 @@
 # Xaalis — Landing Page
 
+**Live:** https://xaalis-landing.vercel.app
+
 Landing page for [Xaalis](https://github.com/atetheone/my_wallet), a personal budgeting PWA built for the CFA franc, in French.
 
 ## Stack
 
 Plain HTML + React (via CDN) + Babel standalone. No build step, no bundler.
 
-| File | Role |
-|------|------|
+| File              | Role                              |
+|-------------------|-----------------------------------|
 | `index.html` | Entry point |
 | `landing.jsx` | Main landing page component |
 | `screens-1-2.jsx` | App screen mockups (screens 1–2) |
