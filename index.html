@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Xaalis — Argent. Sans bruit.</title>
+<meta name="description" content="Une PWA d'épargne et de dépense personnelle, en français, pour le franc CFA. Pensée pour le pouce et trois secondes d'attention." />
+<meta property="og:title" content="Xaalis — Argent. Sans bruit." />
+<meta property="og:description" content="Application web de gestion de budget pour le franc CFA. Hors-ligne, sans publicité, en français." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#F2EDE3" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="landing.css" />
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="app"></div>
+
+<!-- order matters: helpers → screens → landing -->
+<script type="text/babel" src="helpers.jsx"></script>
+<script type="text/babel" src="screens-1-2.jsx"></script>
+<script type="text/babel" src="screens-3-5.jsx"></script>
+<script type="text/babel" src="screens-6-7.jsx"></script>
+<script type="text/babel" src="landing.jsx"></script>
+</body>
+</html>
