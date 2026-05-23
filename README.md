@@ -8,8 +8,8 @@ Landing page for [Xaalis](https://github.com/atetheone/my_wallet), a personal bu
 
 Plain HTML + React (via CDN) + Babel standalone. No build step, no bundler.
 
-| File              | Role                              |
-|-------------------|-----------------------------------|
+| File | Role |
+| --- | --- |
 | `index.html` | Entry point |
 | `landing.jsx` | Main landing page component |
 | `screens-1-2.jsx` | App screen mockups (screens 1–2) |
