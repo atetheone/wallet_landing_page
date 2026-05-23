@@ -721,7 +721,7 @@ function Footer() {
             <h5>Ressources</h5>
             <a href="#">Documentation</a>
             <a href="#">Format d'export</a>
-            <a href="#">Code source</a>
+            <a href="https://github.com/atetheone/my_wallet">Code source</a>
             <a href="#">Confidentialité</a>
           </div>
           <div className="lp-footer-col">
